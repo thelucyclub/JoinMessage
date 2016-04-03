@@ -16,6 +16,8 @@ class Main extends PluginBase implements Listener{
 
      public function onPlayerJoin(PlayerJoinEvent $event){
      $p = $event->getPlayer();
-     $p->sendMessage("Welcome to my server!");
+     $p->sendMessage(TextFormat::DARK_AQUA . "Welcome to " . TextFormat::AQUA . "Diamond " . TextFormat::GREEN . "Realms " . TextFormat::YELLOW . "Pocket " . TextFormat::RED . "Edition " . TextFormat::DARK_AQUA . "!\n");
+     $p->sendMessage(TextFormat::LIGHT_PURPLE . "There are currently " . TextFormat::YELLOW . Server::getInstance->getConnectedPlayers . TextFormat::LIGHT_PURPLE . "players online");
+     $p->sendTip(TextFormat::GRAY . "Welcome " . $event->getPlayer() . "!\nYou need to authenticate to play");
      }
 }
